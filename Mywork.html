@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Myproyecto.css">
+    <title>My Proyect</title>
+    <style>
+        .error-message {
+            color: red;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="Caja-del-login">
+       <h2>Iniciar sesion</h2>
+       <form id="loginForm" onsubmit="return validateForm()">
+            
+        <div class="User">
+          <input type="text" id="email" name="email" required>
+          <label>Correo electrónico</label>
+        </div>
+
+         <div class="User-box">
+            <input type="password" id="password" name="password" required>
+            <label>Contraseña</label>
+         </div>
+         
+         <a href="#" id="loginButton">Aceptar</a>
+         <span id="errorMessage" class="error-message"></span> <!-- Mensaje de error -->
+    </form>
+</div>
+
+    <script src="Proyecto.js"></script>
+</body>
+</html>
