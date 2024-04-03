@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var errorMessage = document.getElementById("errorMessage");
+    var successMessage = document.getElementById("successMessage");
     var loginButton = document.getElementById("loginButton");
 
     loginButton.addEventListener("click", function(event) {
@@ -11,10 +12,15 @@ document.addEventListener("DOMContentLoaded", function() {
             errorMessage.style.opacity = 1; 
             event.preventDefault(); 
             setTimeout(function() {
-                errorMessage.style.opacity = 0; os
+                errorMessage.style.opacity = 0;
             }, 3000);
         } else {
-            errorMessage.innerText = ""; 
+          
+            successMessage.innerText = "¡Usuario registrado correctamente!";
+            successMessage.style.opacity = 1;
+            setTimeout(function() {
+                window.location.href = "Otherpage.html";
+            }, 3000);
         }
     });
 });
